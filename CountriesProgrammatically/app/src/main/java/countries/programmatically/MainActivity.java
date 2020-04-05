@@ -47,7 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button addBtn = new Button(this);
         addBtn.setText("Add");
+        addBtn.setId(0);
         linearLayout.addView(addBtn);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                findViewById(0);
+            }
+        });
 
         Button editBtn = new Button(this);
         editBtn.setText("Edit");
@@ -62,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = new ListView(this);
         mainLayout.addView(listView);
-        listView.setId(0);
-        ListView myListView = (ListView) findViewById(0);
+        listView.setId(1);
+        ListView myListView = (ListView) findViewById(1);
         final ArrayAdapter<String> aa;
         aa = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,
                 COUNTRIES);
